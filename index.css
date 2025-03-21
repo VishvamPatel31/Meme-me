@@ -1,162 +1,132 @@
 html, body {
     margin: 0;
-    font-family: 'Karla', sans-serif;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-/*typography*/
-
-h1, h2, h3{
-    text-align: center;
-}
-
-h1, h2{
-    color: #EED6D3;
-    margin: 0;
-}
+/* typography and icons */
 
 h1{
-    font-size: 28px;
+    color: #0F8CDF;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
-h2 {
-    font-size: 16px;
+i{
+    font-size: 15px;
+    cursor: pointer;
 }
 
-h3{
-    margin: 25px;
+.fa-solid{
+    color: #999;
+}
+
+.liked{
+    color: red;
+}
+
+.retweeted {
+  color: limegreen;
 }
 
 /* layout */
 
-header{
-    background-color: #67595E;
-}
-
-.header-inner{
-    display: flex;
-    align-items: center;
+main, header{
+    width: 290px;
     margin: 0 auto;
-    width: 370px;
-    gap: 15px;
-    padding: 10px 0 0 0;
 }
 
-.pumpkin-img{
-    width: 80px;
+header{
+    padding-bottom: 25px;
 }
 
-.controls-container{
+.tweet-input-area {
     display: flex;
-    flex-direction: column;
-    width: 200px;
-    margin: 0px auto;
+    align-items: flex-start;
+    gap: 10px;
 }
 
-/* controls */
+/* textareas + btn */
 
-.emotion-radios{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #bcbcbc;
-    border-radius: 5px;
-}
-
-.radio{
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #bcbcbc;
-    padding: 4px 8px;
-}
-
-.radio:first-child{
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.radio:last-child{
-    border-bottom: 0;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-label{
-    font-size: 14px;
-    padding: 3px;
-    width: 100%;
-    cursor: pointer;
-}
-
-.highlight{
-    background-color: #fff0ee;
-    color: #bd301d;
-    font-weight: bold;
-    accent-color: #bd301d;
-}
-
-input[type="radio"]{
-    cursor: pointer;
-}
-
-.gifs-check{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 16px;
-}
-
-.gifs-check-label{
-    width: unset;
-    margin-right: 5px;
-}
-
-.get-image-btn{
-    background-color: #67595e;
-    color: #eed6d3;
-    padding: 15px 19px;
-    font-size: 24px;
+textarea{
     border: none;
-    border-radius: 5px;
-    margin-bottom: 8px;
+    resize: none;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
 }
 
-/* modal */
-
-.meme-modal{
-    display: none; /*flex when displayed*/
-    position: fixed;
-    margin: auto;
-    top: 80px;
-    left: 0;
-    right: 0;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #67595e;
-    border-radius: 5px;
-    width: 420px;
-    height: 490px;
-    background-color: #fff0ee;
-}
-
-.cat-img{
-    max-width: 340px;
-    max-height: 420px;
-    border-radius: 5px;
-}
-
-.meme-modal-close-btn{
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    background-color: transparent;
-    border: 2px solid #555;
-    color: #555;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 14px;
-}
-
-.meme-modal-close-btn:hover{
+button{
+    background-color: #1DA1F2;
+    border: none;
     color: white;
-    background-color: #bd301d;
-    border: 2px solid #bd301d;
+    padding: 10px 19px;
+    border-radius: 20px;
+    width: 100%; 
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* tweet */
+
+.tweet{
+    border-top: 1px solid lightgray;
+    padding: 20px 0 0 0;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.tweet-inner{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.tweet-details{
+    display: flex;
+    font-size: 13px;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.tweet-detail{
+    display: flex;
+    gap: 4px;
+}
+
+.tweet-reply{
+    border-top: 1px solid lightgray;
+    padding: 20px 0 0 0px;
+    margin: 10px 0 10px 40px;
+    width: 80%;
+}
+
+.handle{
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    margin-top: 0;
+}
+
+.tweet-text{
+    width: 207px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* images */
+
+.profile-pic{
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 48px;
+}
+
+/* utility */
+.hidden{
+    display: none;
 }
